@@ -45,7 +45,7 @@ function CreateMovie(director,title, year="unknown"){
     this.year = year
 }
 
-const movie1 = new CreateMovie("Lana Wachowski", "Matrix", 2001)
+const movie1 = new CreateMovie("Lana Wachowski", "Matrix", 1999)
 
 // console.log(movie1);
 
@@ -63,7 +63,7 @@ console.log(movie1.isOlder(movie1.year));
 // 1.5.
 // UzupeĹnij poniĹźszy konstruktor o inicjalizacjÄ name, type i funkcjÄ printInstrument. Funkcja printInstrument powinna byÄ wspĂłĹdzielona miÄdzy wszystkie utworzone obiekty.
 
-//function CreateInstrument(name, type) {
+// function CreateInstrument(name, type) {
 //    const instrument = Object.create(...);
 //
 //
