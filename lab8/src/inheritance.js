@@ -115,3 +115,4 @@ StringedInstrument.prototype = Object.create(Instrument.prototype);
 // UtwĂłrz obiekt Animal z polem 'name' i funkcjÄ printName, po ktĂłrym bÄdÄ dziedziczyĹy Mammal (z polem age i funkcjÄ getAge) i Fish (z polem weight i funkcjÄ increaseWeight()) . 
 // NastÄpnie stwĂłrz kolejne obiekty - Dog (z polem breed i nadpisaniem funkcji getAge(), ktĂłra tutaj bÄdzie najpierw wywoĹywaĹa funkcjÄ getAge() z klasy dziedziczonej, a nastÄpnie mnoĹźyĹa wynik razy 4 i wyĹwietlaĹa go) i Salmon (z funkcjÄ catch()), ktĂłre bÄdÄ dziedziczyĹy odpowiednio po Mammal i Fish.
 // W razie problemĂłw wzoruj siÄ na rozwiÄzaniu z poprzedniego zadania.
+

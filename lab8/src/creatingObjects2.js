@@ -40,8 +40,8 @@ console.log(book2);
 const Person = name => {
     this.name = name
 }
-const person1 = new Person("Adam")
-console.log(person1);
+// const person1 = new Person("Adam")
+// console.log(person1);
 
 
 // Przetestuj dziaĹanie tak stworzonego obiektu, korzystajÄc z wiedzy, ktĂłrÄ juĹź masz. Jakie sÄ rĂłznice pomiÄdzy stworzeniem obiektu za pomocÄ poprzednich metod?
