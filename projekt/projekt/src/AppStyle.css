@@ -1,0 +1,727 @@
+body {
+  background-color: gainsboro;
+}
+
+.site {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0% 100%;
+      grid-template-columns: 0% 100%;
+  padding: 15px;
+  background-color: silver;
+  margin: auto;
+  max-width: 85vw;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 376px) {
+  .site {
+    max-width: 100vw;
+    border-radius: 0;
+    padding: 10px;
+  }
+}
+
+.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.right .Back {
+  padding: 5px;
+  border-radius: 15px;
+  background-color: #b8b8b8;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+}
+
+.right .Back button {
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  background-color: lightgray;
+  border: none;
+  border-radius: 10px;
+  height: 1.7em;
+}
+
+.right .Back:hover {
+  cursor: pointer;
+  background-color: #999999;
+}
+
+.right .Back:hover button {
+  color: lightgray;
+  cursor: pointer;
+  background-color: gray;
+}
+
+.right .Rate_book_button {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+  text-align: center;
+}
+
+.right .Rate_book_button input {
+  width: 50%;
+  max-width: 300px;
+}
+
+.BookDetails {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.BookDetails .BookDetailsTitle {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  text-align: center;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  font-size: 30px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.BookDetails .BookDetailsAuthor {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  color: #141414;
+  font-size: 23px;
+  text-align: center;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+.BookDetails .BookDetailsPicture {
+  margin-right: 5px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.BookDetails .BookDetailsPicture img {
+  max-width: 400px;
+}
+
+@media screen and (max-width: 376px) {
+  .BookDetails .BookDetailsPicture {
+    max-width: 100%;
+  }
+  .BookDetails .BookDetailsPicture img {
+    max-width: 100%;
+  }
+}
+
+.BookDetails .BookDetailsRating {
+  margin: 5px;
+  text-align: center;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+}
+
+.BookDetails .BookDetailsRating img {
+  width: 64px;
+}
+
+.BookDetails .BookDetailsGenre {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  font-size: 20px;
+  text-align: center;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+.BookDetails .BookDetailsDescription {
+  overflow-wrap: break-word;
+  word-break: break-all;
+  word-wrap: break-word;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 20px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+}
+
+@media screen and (max-width: 376px) {
+  .BookDetails .BookDetailsRating img {
+    width: 32px;
+  }
+  .BookDetails .BookDetailsDescription {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+  }
+}
+
+.Edit_book_button {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+
+.List {
+  width: 100%;
+}
+
+.ElementList {
+  width: 100%;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background-color: lightgray;
+  border-radius: 20px;
+}
+
+.ElementList .Filtry {
+  max-width: 100%;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: auto;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #5fca71;
+}
+
+@media screen and (max-width: 376px) {
+  .ElementList .Filtry .Sortowanie {
+    margin: 0;
+    min-width: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+  .ElementList .Filtry .Gatunki {
+    min-width: 100%;
+    margin: 0;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100%;
+            flex: 100%;
+  }
+}
+
+.ElementList .Filtry .Sortowanie {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  margin: 3px;
+}
+
+.ElementList .Filtry .Gatunki {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  margin: 3px;
+}
+
+.ElementList .Filtry .FilterContainer {
+  cursor: pointer;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+}
+
+.ElementList .Filtry .FilterHeader {
+  min-height: 100%;
+  padding: 0.4em 1em 0.4em 1em;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+  font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #5fca71;
+  background: #339b33;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.ElementList .Filtry .FilterListContainer {
+  position: absolute;
+  background-color: #f1f1f1;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border: 2px solid #e5e5e5;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #5fca71;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 15px;
+}
+
+.ElementList .Filtry .FilterListContainer:first-child {
+  padding-top: 0em;
+}
+
+.ElementList .Filtry .FilterListContainer .FilterList {
+  margin: 0;
+  padding: 0;
+}
+
+.ElementList .Filtry .FilterListContainer .listitem {
+  border-radius: 15px;
+  list-style: none;
+  padding: 0.6em;
+}
+
+.ElementList .Filtry .FilterListContainer .listitem:hover {
+  cursor: pointer;
+  background-color: #b4f3b4;
+  list-style: none;
+}
+
+.Menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  background-color: gray;
+  height: 60px;
+  line-height: 50px;
+  white-space: nowrap;
+  padding: 2px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+}
+
+.Menu .Home_Link,
+.Menu .Back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  top: 5px;
+  margin: 5px;
+  background-color: #5fca71;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.Menu .Home_Link :link,
+.Menu .Back :link {
+  text-decoration: none;
+}
+
+.Menu .Home_Link a,
+.Menu .Back a {
+  min-width: 100%;
+  color: #339b33;
+  font-weight: bold;
+}
+
+.Menu .Home_Link:hover {
+  background-color: #39a54b;
+}
+
+.Menu .Home_Link:hover a {
+  color: #5fca71;
+}
+
+.booksList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  max-width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.item {
+  -webkit-box-shadow: 8px 8px 5px px rgba(0, 0, 0, 0.2);
+          box-shadow: 8px 8px 5px px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 15px;
+  background-color: darkgray;
+  margin: 5px;
+  justify-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 25%;
+          flex: 2 1 25%;
+  max-width: 200px;
+}
+
+.item :visited {
+  color: black;
+}
+
+.item :link {
+  color: black;
+  text-decoration: none;
+}
+
+.item a {
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.item img {
+  width: 90%;
+  height: 120%;
+}
+
+.item .starList img {
+  width: 15%;
+  height: 15%;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+
+.Add_book_button,
+.Rate_book_button,
+.Edit_book_button,
+.Delete_book_button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+.Add_book_button .addBook,
+.Rate_book_button .addBook,
+.Edit_book_button .addBook,
+.Delete_book_button .addBook {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #727272;
+  font-size: x-large;
+  font-weight: bold;
+  height: 2.5ex;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+}
+
+.Add_book_button .addBook:hover,
+.Rate_book_button .addBook:hover,
+.Edit_book_button .addBook:hover,
+.Delete_book_button .addBook:hover {
+  cursor: pointer;
+  background-color: #9ef1a2;
+}
+
+.Add_book_button .popup-box,
+.Rate_book_button .popup-box,
+.Edit_book_button .popup-box,
+.Delete_book_button .popup-box {
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 60vw;
+  padding: 10px;
+  background-color: #505050;
+  position: fixed;
+  top: 50px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 250px 100px #031a00;
+          box-shadow: 0px 0px 250px 100px #031a00;
+}
+
+@media screen and (max-width: 376px) {
+  .Add_book_button .popup-box,
+  .Rate_book_button .popup-box,
+  .Edit_book_button .popup-box,
+  .Delete_book_button .popup-box {
+    width: 80vw;
+  }
+}
+
+.Add_book_button .popup-box .box,
+.Rate_book_button .popup-box .box,
+.Edit_book_button .popup-box .box,
+.Delete_book_button .popup-box .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Add_book_button .popup-box .box span,
+.Rate_book_button .popup-box .box span,
+.Edit_book_button .popup-box .box span,
+.Delete_book_button .popup-box .box span {
+  line-height: 2em;
+  text-align: center;
+  background-color: lightgrey;
+  height: 2em;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  border: none;
+  border-radius: 10px;
+  height: 4ex;
+}
+
+.Add_book_button .popup-box .box span:hover,
+.Rate_book_button .popup-box .box span:hover,
+.Edit_book_button .popup-box .box span:hover,
+.Delete_book_button .popup-box .box span:hover {
+  background-color: #ff5353;
+  cursor: pointer;
+}
+
+.Add_book_button .popup-box .box .addBookText,
+.Rate_book_button .popup-box .box .addBookText,
+.Edit_book_button .popup-box .box .addBookText,
+.Delete_book_button .popup-box .box .addBookText {
+  font-size: x-large;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  margin-bottom: 4px;
+  text-align: center;
+  position: relative;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  color: #56ff6c;
+}
+
+.Add_book_button .popup-box .box div,
+.Rate_book_button .popup-box .box div,
+.Edit_book_button .popup-box .box div,
+.Delete_book_button .popup-box .box div {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+.Add_book_button .popup-box .box div form,
+.Rate_book_button .popup-box .box div form,
+.Edit_book_button .popup-box .box div form,
+.Delete_book_button .popup-box .box div form {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+.Add_book_button .popup-box form,
+.Rate_book_button .popup-box form,
+.Edit_book_button .popup-box form,
+.Delete_book_button .popup-box form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Add_book_button .popup-box form input,
+.Rate_book_button .popup-box form input,
+.Edit_book_button .popup-box form input,
+.Delete_book_button .popup-box form input {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 2em;
+  height: auto;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-flex: 48%;
+      -ms-flex: 48%;
+          flex: 48%;
+}
+
+.Add_book_button .popup-box form input:nth-of-type(1),
+.Rate_book_button .popup-box form input:nth-of-type(1),
+.Edit_book_button .popup-box form input:nth-of-type(1),
+.Delete_book_button .popup-box form input:nth-of-type(1) {
+  margin-right: 5px;
+}
+
+.Add_book_button .popup-box form input:nth-of-type(3),
+.Rate_book_button .popup-box form input:nth-of-type(3),
+.Edit_book_button .popup-box form input:nth-of-type(3),
+.Delete_book_button .popup-box form input:nth-of-type(3) {
+  margin-right: 5px;
+}
+
+.Add_book_button .popup-box form textarea,
+.Rate_book_button .popup-box form textarea,
+.Edit_book_button .popup-box form textarea,
+.Delete_book_button .popup-box form textarea {
+  height: 100px;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-all;
+  min-height: 2em;
+  margin-bottom: 5px;
+  border: none;
+  border-radius: 10px;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+.Add_book_button .popup-box form button,
+.Rate_book_button .popup-box form button,
+.Edit_book_button .popup-box form button,
+.Delete_book_button .popup-box form button {
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 4ex;
+}
+
+.Add_book_button .popup-box form button:hover,
+.Rate_book_button .popup-box form button:hover,
+.Edit_book_button .popup-box form button:hover,
+.Delete_book_button .popup-box form button:hover {
+  cursor: pointer;
+  background-color: #9ef1a2;
+}
+
+.Delete_book_button {
+  -webkit-box-ordinal-group: 8;
+      -ms-flex-order: 7;
+          order: 7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Delete_book_button input {
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  height: 2em;
+  border: none;
+  background-color: #c53232;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+}
+
+.Delete_book_button input:hover {
+  background-color: #9e0101;
+  cursor: pointer;
+}
+
+.Rate_book_button .popup-box {
+  top: 200px;
+  width: 30vw;
+}
+
+.Rate_book_button .Form {
+  margin-left: 20px;
+  margin-right: 20px;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Rate_book_button .Form img {
+  margin: 5px;
+  -webkit-box-flex: 15%;
+      -ms-flex: 15%;
+          flex: 15%;
+}
+
+.Rate_book_button button {
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  height: 4ex;
+}
+
+.Rate_book_button button:hover {
+  cursor: pointer;
+  background-color: #9ef1a2;
+}
+
+@media screen and (max-width: 376px) {
+  .Rate_book_button .popup-box {
+    width: 80vw;
+  }
+}
+/*# sourceMappingURL=AppStyle.css.map */
