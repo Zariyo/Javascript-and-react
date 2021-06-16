@@ -1,5 +1,5 @@
 
-import {  useState } from "react";
+import React, {  useState } from "react";
 const axios = require('axios')
 
 
@@ -42,7 +42,7 @@ function ElementRate() {
 
     return (
         <div>
-            <div class="Form">
+            <div className="Form">
                 <img alt = "" width="15" onClick={() => { changeSrc(0); setcurrRate(1) }} src={currSrc[0]}></img>
                 <img alt = "" width="15" onClick={() => { changeSrc(1); setcurrRate(2) }} src={currSrc[1]}></img>
                 <img alt = "" width="15" onClick={() => { changeSrc(2); setcurrRate(3) }} src={currSrc[2]}></img>

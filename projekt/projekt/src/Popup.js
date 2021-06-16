@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 const Popup = props => {
   return (
@@ -9,6 +10,11 @@ const Popup = props => {
       </div>
     </div>
   );
+};
+
+Popup.propTypes = {
+  content: PropTypes.object.isRequired,
+  handleClose: PropTypes.object.isRequired,
 };
 
 export default Popup;

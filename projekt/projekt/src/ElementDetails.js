@@ -1,7 +1,7 @@
 import Popup from './Popup';
 import ElementRate from './ElementRate'
 import UpdateElementForm from './UpdateElementForm'
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {  useHistory } from 'react-router-dom';
 
 const axios = require('axios')
@@ -35,7 +35,7 @@ function ElementDetails() {
     setIsOpenDelete(!isOpenDelete);
   }
 
-  const [currSrc, setcurrSrc] = useState(['http://cdn.onlinewebfonts.com/svg/img_323913.png',
+  const [currSrc] = useState(['http://cdn.onlinewebfonts.com/svg/img_323913.png',
     'http://cdn.onlinewebfonts.com/svg/img_323913.png',
     'http://cdn.onlinewebfonts.com/svg/img_323913.png',
     'http://cdn.onlinewebfonts.com/svg/img_323913.png',
@@ -90,16 +90,16 @@ function ElementDetails() {
 
   return (
     <>
-      <div class="Edit_book_button">
+      <div className="Edit_book_button">
         <input
-          class="addBook"
+          className="addBook"
           type="button"
           value="Edytuj"
           onClick={togglePopup}
         />
         {isOpen && <Popup
           content={<>
-            <div class="addBookText">Edytuj</div>
+            <div className="addBookText">Edytuj</div>
             <UpdateElementForm />
           </>}
           handleClose={togglePopup}
@@ -107,22 +107,22 @@ function ElementDetails() {
 
 
       </div>
-      <div class="BookDetails">
-        <div class="BookDetailsTitle">{books.title}</div>
-        <div class="BookDetailsAuthor">{books.author}</div>
-        <div class="BookDetailsPicture"><img src={getImage(books)}></img></div>
-        <div class="BookDetailsGenre">Gatunek: {books.genre}</div>
-        <div class="BookDetailsRating">{getRating(books.rating)}</div>
-        <div class="Rate_book_button">
+      <div className="BookDetails">
+        <div className="BookDetailsTitle">{books.title}</div>
+        <div className="BookDetailsAuthor">{books.author}</div>
+        <div className="BookDetailsPicture"><img src={getImage(books)}></img></div>
+        <div className="BookDetailsGenre">Gatunek: {books.genre}</div>
+        <div className="BookDetailsRating">{getRating(books.rating)}</div>
+        <div className="Rate_book_button">
           <input
-            class="rateBook"
+            className="rateBook"
             type="button"
             value="Oceń"
             onClick={toggleRatePopup}
           />
           {isOpenRate && <Popup
             content={<>
-              <div class="addBookText">Oceniasz</div>
+              <div className="addBookText">Oceniasz</div>
               <ElementRate />
             </>}
             handleClose={toggleRatePopup}
@@ -130,19 +130,19 @@ function ElementDetails() {
 
 
         </div>
-        <div class="BookDetailsDescription">{books.description}</div>
+        <div className="BookDetailsDescription">{books.description}</div>
       </div>
-      <div class="Back"><button onClick={() => history.goBack()}>Wróć</button></div>
-      <div class="Delete_book_button">
+      <div className="Back"><button onClick={() => history.goBack()}>Wróć</button></div>
+      <div className="Delete_book_button">
         <input
-          class="delBook"
+          className="delBook"
           type="button"
           value="Usuń"
           onClick={deleteItem}
         />
         {isOpenDelete && <Popup
           content={<>
-            <div class="addBookText">Usuń</div>
+            <div className="addBookText">Usuń</div>
           </>}
           handleClose={togglePopupDelete}
         />}

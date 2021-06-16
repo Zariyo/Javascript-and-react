@@ -1,4 +1,5 @@
 import { Formik, Form, Field } from "formik";
+import React from "react";
 const axios = require('axios')
 let _ = require('lodash')
 
@@ -35,7 +36,7 @@ function ElementForm() {
   };
 
   return (
-    <div class="Form">
+    <div className="Form">
       <Formik initialValues={
         {
           title: 'Tytuł',

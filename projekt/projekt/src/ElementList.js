@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 let _ = require('lodash')
 const axios = require('axios')
@@ -36,7 +36,7 @@ function ElementList() {
         else if (sort === "Ocena") {
             setBookstemp(_.orderBy(bookstemp, ['rating'], ['desc']))
         }
-    };
+    }
 
     function setGatunek(gatunek) {
         if (gatunek === null || gatunek === "Brak") { setBookstemp(books); setSelectedOption("Brak") }
@@ -44,7 +44,7 @@ function ElementList() {
             setBookstemp(_.filter(books, { 'genre': gatunek }))
             setSelectedOption("Brak")
         }
-    };
+    }
 
 
     const [isOpen, setIsOpen] = useState(false);
@@ -75,7 +75,7 @@ function ElementList() {
             })
     }, [])
 
-    books.reduce((acc, curr, ind, arr) => {
+    books.reduce((acc, curr) => {
         if (typeof curr['genre'] === 'string') {
             if (!(_.includes(gatunki, (curr['genre'])))) {
                 gatunki.push(curr['genre'])
@@ -92,7 +92,7 @@ function ElementList() {
         'http://cdn.onlinewebfonts.com/svg/img_323913.png']) {
         if (rating === null) {
             return (
-                <div class="starList">
+                <div className="starList">
                     <img alt = "" src="http://cdn.onlinewebfonts.com/svg/img_323913.png" width="15px"></img>
                     <img alt = "" src="http://cdn.onlinewebfonts.com/svg/img_323913.png" width="15px"></img>
                     <img alt = "" src="http://cdn.onlinewebfonts.com/svg/img_323913.png" width="15px"></img>
@@ -108,7 +108,7 @@ function ElementList() {
             if (rating >= 4) { src[3] = "https://www.jing.fm/clipimg/full/112-1129671_clipart-boe-narodzenie-yellow-star-clipart.png" }
             if (rating >= 5) { src[4] = "https://www.jing.fm/clipimg/full/112-1129671_clipart-boe-narodzenie-yellow-star-clipart.png" }
             return (
-                <div class="starList">
+                <div className="starList">
                     <img alt = "" width="15" src={src[0]}></img>
                     <img alt = "" width="15" src={src[1]}></img>
                     <img alt = "" width="15" src={src[2]}></img>
@@ -134,16 +134,16 @@ function ElementList() {
     return (
         <>
 
-            <div class="ElementList">
-                <div class="Filtry">
-                    <div class="Sortowanie">
-                        <div class="FilterContainer">
-                            <div onClick={toggling} class="FilterHeader">Sortowanie: {selectedOption || "Brak"}</div>
+            <div className="ElementList">
+                <div className="Filtry">
+                    <div className="Sortowanie">
+                        <div className="FilterContainer">
+                            <div onClick={toggling} className="FilterHeader">Sortowanie: {selectedOption || "Brak"}</div>
                             {isOpen && (
-                                <div class="FilterListContainer">
-                                    <ul class="FilterList">
+                                <div className="FilterListContainer">
+                                    <ul className="FilterList">
                                         {options.map(option => (
-                                            <li class="listitem" key={option} onClick={onOptionClicked(option)} >
+                                            <li className="listitem" key={option} onClick={onOptionClicked(option)} >
                                                 {option}
                                             </li>
                                         ))}
@@ -152,14 +152,14 @@ function ElementList() {
                             )}
                         </div>
                     </div>
-                    <div class="Gatunki">
-                        <div class="FilterContainer">
-                            <div onClick={togglingGatunki} class="FilterHeader">Gatunek: {selectedOptionGatunek || "Brak"}</div>
+                    <div className="Gatunki">
+                        <div className="FilterContainer">
+                            <div onClick={togglingGatunki} className="FilterHeader">Gatunek: {selectedOptionGatunek || "Brak"}</div>
                             {isOpenGatunki && (
-                                <div class="FilterListContainer">
-                                    <ul class="FilterList">
+                                <div className="FilterListContainer">
+                                    <ul className="FilterList">
                                         {gatunki.map(option => (
-                                            <li class="listitem" key={option} onClick={onOptionClickedGatunek(option)} >
+                                            <li className="listitem" key={option} onClick={onOptionClickedGatunek(option)} >
                                                 {option}
                                             </li>
                                         ))}
@@ -169,9 +169,9 @@ function ElementList() {
                         </div></div>
 
                 </div>
-                <div class="booksList">{bookstemp.map(item => (
-                    <div class={"item item-" + item.id}>
-                        <div><a href={"/details/" + item.id} name="listItem" ><img alt = "" width="150" height="200" alt="" src={GetImage(item)}></img></a></div>
+                <div className="booksList">{bookstemp.map(item => (
+                    <div key = {item.id} className={"item item-" + item.id}>
+                        <div><a href={"/details/" + item.id} name="listItem" ><img alt = "" width="150" height="200" src={GetImage(item)}></img></a></div>
                         <a href={"/details/" + item.id} name="listItem" ><div>{item.title}</div></a>
                         <div>{getRating(item.rating)}</div>
                     </div>
